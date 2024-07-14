@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Digital Currency</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="/home.html">Sarah</a>
+    </nav>
+    <div class="topDiv">
+        <img style="width: 100%; position: relative; margin-top: -250px; z-index: -10;" src="./currency1.webp">
+        <div class="topDivHeading">
+            <div style="font-size: 50px;">Digital Currency </div>
+            <div style="font-size: 25px;">Laws and Policies</div>
+        </div>
+    </div>
+
+    <div class="infoList" id="lists"></div>
+    <div class="footer"></div>
+
+
+
+</body>
+
+<script type="text/javascript">
+
+    const arr = [
+        {
+            text: "Cryptocurrency Regulations Around the World",
+            link: "https://www.investopedia.com/cryptocurrency-regulations-around-the-world-5202122"
+        },
+        {
+            text: "Cryptocurrency regulation: Here’s what countries around the world have done",
+            link: "https://www.moneycontrol.com/news/business/cryptocurrency/cryptocurrency-regulation-heres-what-countries-around-the-world-have-done-7760921.html"
+        },
+        {
+            text: "Blockchain and cryptocurrency laws and regulations 2022 , India",
+            link: "https://unctad.org/news/unctad-spells-out-actions-curb-cryptocurrencies-developing-countries"
+
+        },
+        {
+            text: "What are the policies and regulations surrounding Crypto Trading in India?",
+            link: "https://www.livemint.com/brand-post/what-are-the-policies-and-regulations-surrounding-crypto-trading-in-india-11635932367865.html"
+        },
+        {
+            text: "India plans law that will prohibit ‘all private cryptocurrencies,’ with ‘certain exceptions",
+            link: "https://techcrunch.com/2021/11/23/india-plans-law-that-will-prohibit-all-private-cryptocurrencies-with-certain-exceptions/"
+        },
+
+    ]
+
+
+    const listsDiv = document.getElementById("lists");
+    arr.forEach(element => {
+        let newDiv = document.createElement('div')
+        newDiv.classList.add('info');
+        newDiv.innerHTML = `<img src="./right.svg" alt="right" />
+            <div class="infoDiv">
+                <p>${element.text}</p>
+                <a href=${element.link}>
+                <button>Read More</button>
+            </a>
+            </div>`
+        listsDiv.appendChild(newDiv);
+    });
+
+
+
+
+
+</script>
+
+
+
+</html>

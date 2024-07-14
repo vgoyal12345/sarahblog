@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cyber</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="/home.html">Sarah</a>
+
+    </nav>
+    <div class="topDiv">
+        <img style="width: 100%;" src="./cyberCrime.png">
+        <div class="topDivHeading">
+            <div style="font-size: 50px;">Cybercrime </div>
+            <div style="font-size: 25px;">Laws and Policies</div>
+        </div>
+    </div>
+
+    <div class="infoList" id="lists"></div>
+    <div class="footer"></div>
+
+
+
+</body>
+
+<script type="text/javascript">
+
+    const arr = [
+        {
+            text: "166 Cybersecurity Statistics and Trends",
+            link: "https://www.varonis.com/blog/cybersecurity-statistics"
+
+        },
+        {
+            text: "International association of chiefs of police",
+            link: "https://www.theiacp.org/topics/cybercrime"
+        },
+        {
+            text: "Creating Strong Cybersecurity Policies: Risks Require Different Controls",
+            link: "https://www.forbes.com/sites/forbestechcouncil/2022/01/25/creating-strong-cybersecurity-policies-risks-require-different-controls/"
+        },
+        {
+            text: "Why Employees Violate Cybersecurity Policies",
+            link: "https://hbr.org/2022/01/research-why-employees-violate-cybersecurity-policies"
+        },
+        {
+            text: "Microsoft Cybersecurity and policies",
+            link: "https://www.microsoft.com/en-us/cybersecurity"
+        }]
+
+
+    const listsDiv = document.getElementById("lists");
+    arr.forEach(element => {
+        let newDiv = document.createElement('div')
+        newDiv.classList.add('info');
+        newDiv.innerHTML = `<img src="./right.svg" alt="right" />
+            <div class="infoDiv">
+                <p>${element.text}</p>
+                <a href=${element.link}>
+                <button>Read More</button>
+            </a>
+            </div>`
+        listsDiv.appendChild(newDiv);
+    });
+
+
+</script>
+
+
+
+</html>

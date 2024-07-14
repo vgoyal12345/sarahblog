@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Environment</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="/home.html">Sarah</a>
+    </nav>
+    <div class="topDiv">
+        <img style="width: 100%;" src="./environmentHeader.png">
+        <div class="topDivHeading">
+            <div style="font-size: 50px;">Environmental </div>
+            <div style="font-size: 25px;">Laws and Policies</div>
+        </div>
+    </div>
+
+    <div class="infoList" id="lists"></div>
+    <div class="footer"></div>
+
+
+
+</body>
+
+<script type="text/javascript">
+
+    const arr = [
+        {
+            text: "How stringent are the environmental policies",
+            link: "https://www.oecd.org/economy/greeneco/How-stringent-are-environmental-policies.pdf"
+        },
+        {
+            text: "Environmental and social policies of the World Bank",
+            link: "https://www.worldbank.org/en/projects-operations/environmental-and-social-policies"
+        },
+        {
+            text: "Environmental laws in India",
+            link: "https://www.mondaq.com/india/waste-management/624836/environment-laws-in-india"
+
+        },
+        {
+            text: "Waste Regulation In India",
+            link: "https://www.cppr.in/wp-content/uploads/2012/10/Waste-Regulation-in-India-An-Overview-Bernard.pdf"
+        },
+        {
+            text: "River Pollution: Issues and Laws Regulating it in India",
+            link: "https://www.legalserviceindia.com/legal/article-3801-river-pollution-issues-and-laws-regulating-it-in-india.html"
+        },
+
+
+    ]
+
+
+    const listsDiv = document.getElementById("lists");
+    arr.forEach(element => {
+        let newDiv = document.createElement('div')
+        newDiv.classList.add('info');
+        newDiv.innerHTML = `<img src="./right.svg" alt="right" />
+            <div class="infoDiv">
+                <p>${element.text}</p>
+                <a href=${element.link}>
+                <button>Read More</button>
+            </a>
+            </div>`
+        listsDiv.appendChild(newDiv);
+    });
+
+
+
+
+
+</script>
+
+
+
+</html>
